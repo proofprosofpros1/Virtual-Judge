@@ -1,0 +1,8 @@
+while True:
+    a, b, c, d = map(int, input().split())
+    if a == 0 and b == 0 and c == 0 and d == 0:
+        break        
+    start = 1080
+    diff = 360-((b-a)*9)
+    res = start + (3 * diff) 
+    print(res)
