@@ -1,8 +1,20 @@
 while True:
     a, b, c, d = map(int, input().split())
     if a == 0 and b == 0 and c == 0 and d == 0:
-        break        
-    start = 1080
-    diff = 360-((b-a)*9)
-    res = start + (3 * diff) 
-    print(res)
+        break
+    if a >= b:
+        angle1 = ((a-b)*9) 
+    elif a < b:
+        angle1 = ((a-b+40)*9)  
+    
+    if b <= c:
+        angle2 = ((a-b)*9) 
+    elif b > c:
+        angle2 = ((a-b+40)*9)  
+
+    if c >= d:
+        angle3 = ((a-b)*9) 
+    elif c < d:
+        angle3 = ((a-b+40)*9)  
+
+    print(angle1 + angle2 + angle3 + 1080)
